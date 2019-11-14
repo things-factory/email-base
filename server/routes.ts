@@ -1,4 +1,3 @@
-import { sendEmail } from './controllers/email'
 const SEND_EMAIL_PATH = 'send-email'
 process.on('bootstrap-module-history-fallback' as any, (app, fallbackOption) => {
   /*
@@ -22,22 +21,4 @@ process.on('bootstrap-module-route' as any, (app, routes) => {
    * ex) routes.get('/path', async(context, next) => {})
    * ex) routes.post('/path', async(context, next) => {})
    */
-
-  routes.get(`/${SEND_EMAIL_PATH}`, async (context, next) => {
-    try {
-      var sendEmailInfo = await sendEmail({
-        receiver: 'moosung.gil@hatiolab.com',
-        subject: 'test!',
-        content: `<div>테스트입니다.</div>`
-      })
-
-      context.status = 200
-      context.body = 'OK'
-    } catch (e) {
-      context.status = 400
-      context.body = {
-        ...e
-      }
-    }
-  })
 })

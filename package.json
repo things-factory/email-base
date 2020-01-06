@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/email-base",
-  "version": "1.0.0-alpha.2",
+  "version": "2.0.0",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -28,7 +28,7 @@
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
-    "@things-factory/shell": "^1.0.0-alpha.1",
+    "@things-factory/shell": "^2.0.0",
     "nodemailer": "^6.3.1"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/email-base",
-  "version": "2.0.0",
+  "version": "3.0.0-beta.1",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -22,13 +22,13 @@
     "clean": "npm run clean:server && npm run clean:client",
     "prepublish": "npm run build:server",
     "migration": "npm run build:server && things-factory-migration",
-    "migration:create": "node ./node_modules/typeorm/cli.js migration:create",
+    "migration:create": "node ./node_modules/typ`eorm/cli.js migration:create",
     "migration:generate": "node ./node_modules/typeorm/cli.js migration:generate",
     "migration:run": "node ./node_modules/typeorm/cli.js migration:run",
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
-    "@things-factory/shell": "^2.0.0",
+    "@things-factory/shell": "^2.3.0-beta.1",
     "nodemailer": "^6.3.1"
   },
   "devDependencies": {

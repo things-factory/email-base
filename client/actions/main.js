@@ -1,1 +1,0 @@
-export const UPDATE_EMAIL_BASE = 'UPDATE_EMAIL_BASE'
